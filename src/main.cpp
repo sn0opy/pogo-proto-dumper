@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
       if (STRING(metadata, type->namespaceIndex) != "Holoholo.Rpc") continue;
 
       // If our type is an enum
-      if (type->bitfield == 2)
+      if (type->enum_type)
       {
         cout << "enum " << STRING(metadata, type->nameIndex) << " {" << endl;
         // Skip the first field which will always be "__value"

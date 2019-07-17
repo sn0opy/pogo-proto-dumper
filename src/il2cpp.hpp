@@ -264,15 +264,15 @@ namespace il2cpp
     uint16_t interfaces_count;
     uint16_t interface_offsets_count;
 
-    //uint32_t value_type : 1;
-    //uint32_t enum_type : 1;
-    //uint32_t has_finalize : 1;
-    //uint32_t has_cctor : 1;
-    //uint32_t is_blittable : 1;
-    //uint32_t is_import : 1;
-    //uint32_t packing_size : 4;
-    //uint32_t _reserved : 22;
-    uint32_t bitfield;
+    uint32_t value_type : 1;
+    uint32_t enum_type : 1;
+    uint32_t has_finalize : 1;
+    uint32_t has_cctor : 1;
+    uint32_t is_blittable : 1;
+    uint32_t is_import : 1;
+    uint32_t packing_size : 4;
+    uint32_t _reserved : 22;
+    // uint32_t bitfield; // probably new and replaces lines above?
     uint32_t token;
   };
 
