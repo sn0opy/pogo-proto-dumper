@@ -294,8 +294,6 @@ namespace il2cpp
     uint32_t exportedTypeCount;
     MethodIndex entryPointIndex;
     uint32_t token;
-    int32_t customAttributeStart;
-    uint32_t customAttributeCount;
   };
 
   struct Il2CppAssemblyName
@@ -343,7 +341,6 @@ namespace il2cpp
 
   struct Il2CppCustomAttributeTypeRange
   {
-    uint32_t token;
     int32_t start;
     int32_t count;
   };
@@ -399,10 +396,10 @@ namespace il2cpp
         throw std::runtime_error("File does not have valid header");
       }
 
-      //if (header.version != 21)
-      //{
-      //  throw std::runtime_error("Metadata is described by unsupported version. Got version " + std::to_string(header.version));
-      //}
+      if (header.version != 24)
+      {
+        throw std::runtime_error("Metadata is described by unsupported version. Got version " + std::to_string(header.version));
+      }
 
       // Read the file binary into corresponding arrays of structs
 #define LOAD_DATA(type_name, container_name) \

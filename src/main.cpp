@@ -45,7 +45,6 @@ int main(int argc, char* argv[])
 
     ifstream global_metdata(argv[1], ios::binary);
     metadata metadata(global_metdata);
-
     // All of the game's data can be found in the "Assembly-CSharp.dll" image
     Il2CppImageDefinition* game_image = nullptr;
     for (unsigned i = 0; i < COUNT(metadata, images); i++)
